@@ -26,6 +26,7 @@
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
+<<<<<<< HEAD
 .left-entity img:hover {
     transform: scale(1.1);
 }
@@ -52,6 +53,16 @@
 #sidebar.close{
     left: -300px;
 }
+=======
+
+.left-entity img:hover {
+    transform: scale(1.1);
+}
+.sidebar{
+    
+}
+
+>>>>>>> bb9bce1ddd29b8bae0c253b9d4c6c31229833af3
 /* Middle Section */
 .middle-section {
     display: flex;
