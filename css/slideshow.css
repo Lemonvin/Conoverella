@@ -1,0 +1,39 @@
+.slideshow-container{
+    background-color: black;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.slides{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+}
+.slides-pic{
+    display: flex;
+    gap: 10px;
+    margin: auto;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex:1;
+}
+.left img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.right{
+    flex: 2;
+}
+.right img{
+    width: 100%;
+    max-height: 100px;
+    object-fit: cover;
+}
