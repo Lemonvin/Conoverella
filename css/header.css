@@ -26,14 +26,32 @@
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
-
 .left-entity img:hover {
     transform: scale(1.1);
 }
-.sidebar{
-    
+.left-entity button{
+    background-color: black;
+    border: none;
 }
-
+#sidebar{
+    height: 100vh;
+    width: 250px;
+    background-color: white;
+    display: none;
+    position: fixed;
+    left: -300px;
+    transition: 0.75s left ease-in-out;
+    z-index: 100;
+}
+#sidebar button{
+    cursor: pointer;
+}
+#sidebar.open{
+    left: 0;
+}
+#sidebar.close{
+    left: -300px;
+}
 /* Middle Section */
 .middle-section {
     display: flex;

@@ -4,32 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conoveralla</title>
-    <link rel="stylesheet" href="Home.css">
-    <link rel="stylesheet" href="css\slideshow.css">
-    <link rel="stylesheet" href="css\header.css">
-    <link rel="stylesheet" href="css\footer.css">
+    <link rel="stylesheet" href="css/Home.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&family=Tienne:wght@400;700;900&family=Tilt+Prism&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
 
 </head>
+<script>
+    function openSidebar() {
+        let sidebar = document.getElementById('sidebar');
+        sidebar.style.display = 'block'; 
+        setTimeout(function() {
+            sidebar.classList.add('open');
+            sidebar.classList.remove('close');
+        }, 10); 
+    }
+    function closeSidebar(){
+        let sidebar = document.getElementById('sidebar');
+        sidebar.classList.add('close');
+        setTimeout(function() {
+            sidebar.style.display = 'none';
+        }, 750);
+    }
+</script>
 <body>
     <nav>
+        <div id="sidebar">
+            <button onclick="closeSidebar()" class="close-button">&times;</button>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+        </div>
         <div class="header">
             <div class="left-section">
                 <div class="left-entity">
-                    <button></button>
-                    <img src="pic\header pics\hamburger (2).png">
+                    <button onclick="openSidebar()"><img src="pic\header pics\hamburger (2).png"></button>
                 </div>
                 <div class="left-entity">
-                    <img src="pic\header pics\shopping-cart.png">
+                    <button><img src="pic\header pics\shopping-cart.png"></button>
                 </div>
                 <div class="left-entity">
-                    <img src="pic\header pics\delivery.png">
+                    <button><img src="pic\header pics\delivery.png"></button>
                 </div>
                 <div class="left-entity">
-                    <img src="pic\header pics\user.png">
+                    <button><img src="pic\header pics\delivery.png"></button>
                 </div>
             </div>
             <div class="middle-section">
