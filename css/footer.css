@@ -1,0 +1,149 @@
+footer {
+    height: auto;
+    overflow: hidden;
+}
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    height: 100%;
+    border-top: 1px solid white;
+    padding: 20px;
+    font-size: 12px;
+    flex-wrap: wrap;
+}
+
+/* Social Section */
+.social {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.company-name {
+    font-family: "Tilt Prism", sans-serif;
+    font-size: 40px;
+    margin-bottom: 5px;
+    color: white;
+    text-align: center;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 200px;
+}
+
+.social-container img {
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Sections: Policies, Contacts, Links */
+.politics,
+.contacts,
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+    width: 250px;
+    width: 250px;
+}
+.links{
+    margin-left: -50px;
+}
+
+.politics-title,
+.contacts-title,
+.links-title {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.social a,
+.politics a,
+.links a,
+.contacts p {
+    color: gray;
+    margin: 0;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.politics a:hover,
+.links a:hover {
+    color: white;
+}
+
+/* Copyright Section */
+.copyright {
+    background-color: black;
+    height: 80px;
+    border-top: 1px solid white;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* Payment Icons */
+.payment-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-links img {
+    height: 30px;
+    width: 50px;
+    border-radius: 3px;
+    background-color: white;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+}
+
+.payment-links img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social,
+    .politics,
+    .contacts,
+    .links {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .social-container {
+        justify-content: center;
+        width: 100%;
+    }
+}
