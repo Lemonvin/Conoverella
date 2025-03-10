@@ -14,27 +14,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
 
 </head>
-<script>
-    function openSidebar() {
-        let sidebar = document.getElementById('sidebar');
-        sidebar.style.display = 'block'; 
-        setTimeout(function() {
-            sidebar.classList.add('open');
-            sidebar.classList.remove('close');
-        }, 10); 
-    }
-    function closeSidebar(){
-        let sidebar = document.getElementById('sidebar');
-        sidebar.classList.add('close');
-        setTimeout(function() {
-            sidebar.style.display = 'none';
-        }, 750);
-    }
-</script>
+<script src="../JS/header.js"></script>
 <body>
     <nav>
         <div id="sidebar">
-            <button onclick="closeSidebar()" class="close-button">&times;</button>
+            <button onclick="closeSidebar('hamburg')" class="close-button">&times;</button>
+            <h1>content</h1>
+            <h1>content</h1>
+            <h1>content</h1>
+        </div>
+        <div id="cart">
+            <button onclick="closeSidebar('cart')" class="close-button">&times;</button>
             <h1>content</h1>
             <h1>content</h1>
             <h1>content</h1>
@@ -42,10 +32,10 @@
         <div class="header">
             <div class="left-section">
                 <div class="left-entity">
-                    <button onclick="openSidebar()"><img src="pic\header pics\hamburger (2).png"></button>
+                    <button onclick="openSidebar('hamburg')"><img src="pic\header pics\hamburger (2).png"></button>
                 </div>
                 <div class="left-entity">
-                    <button><img src="pic\header pics\shopping-cart.png"></button>
+                    <button onclick="openSidebar('cart')"><img src="pic\header pics\shopping-cart.png"></button>
                 </div>
                 <div class="left-entity">
                     <button><img src="pic\header pics\delivery.png"></button>
@@ -61,8 +51,8 @@
             </div>
             <div class="right-section">
                 <div class="search">
-                    <input class="bar" type="text" placeholder="What are you looking for?">
-                    <button class="search-button">
+                    <input onclick="" class="bar" type="text" placeholder="What are you looking for?">
+                    <button onclick="" class="search-button">
                         <img src="pic\header pics\search.png">
                     </button>
                 </div>
@@ -108,7 +98,7 @@
                         <p class="policy-description">SIMPLY RETURN IT WITHIN 30 DAYS FOR AN EXCHANGE</p>
                     </div>
                 </div>
-                <div class="policy">
+                <div class="policy" id="policy-payment-secure">
                     <img src="pic\home pics\padlock.png">
                     <div class="policy-text">
                         <p class="policy-title">100% PAYMENT SECURITY</p>
