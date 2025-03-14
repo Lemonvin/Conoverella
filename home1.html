@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONOVERELLA - Become The Better Version Of Yourself</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            background-color: #000;
+            padding: 10px 0;
+            color: white;
+            position: relative;
+            z-index: 1030;
+        }
+
+        .logo {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-align: center;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.8rem;
+            }
+        }
+
+        .logo-text {
+            display: inline-block;
+            position: relative;
+        }
+
+        .logo-text::before, .logo-text::after {
+            content: "CONOVERELLA";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .logo-text::before {
+            color: rgba(255, 255, 255, 0.5);
+            z-index: 1;
+        }
+
+        .logo-text::after {
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+            z-index: 2;
+        }
+
+        .tagline {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .tagline {
+                font-size: 0.6rem;
+            }
+        }
+
+        .search-box {
+            background-color: #333;
+            border-radius: 20px;
+            padding: 5px 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: white;
+            width: 100%;
+            padding: 5px;
+        }
+
+        .search-box input:focus {
+            outline: none;
+        }
+
+        .search-box button {
+            background: transparent;
+            border: none;
+            color: white;
+        }
+
+        /* Main Navigation */
+        .main-nav {
+            background-color: #e6dcc8;
+            padding: 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .main-nav .nav-link {
+            color: #000;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+        }
+
+        @media (max-width: 991px) {
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-nav {
+                display: block;
+            }
+            
+            .offcanvas {
+                background-color: #e6dcc8;
+            }
+            
+            .offcanvas-header {
+                background-color: #000;
+                color: white;
+            }
+            
+            .mobile-nav-link {
+                color: #000;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 0.8rem 1rem;
+                font-size: 1rem;
+                display: block;
+                border-bottom: 1px solid #ccc;
+                text-decoration: none;
+            }
+            
+            .mobile-nav-link:hover {
+                background-color: #d6cbb8;
+            }
+        }
+
+        /* Hero Carousel */
+        .hero-carousel {
+            position: relative;
+        }
+
+        .carousel-item {
+            height: 600px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-item {
+                height: 400px;
+            }
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .welcome-text {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .welcome-text {
+                font-size: 2.5rem;
+            }
+        }
+
+        .hero-logo {
+            font-family: 'Times New Roman', serif;
+            font-size: 4rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 10px 0 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .hero-logo {
+                font-size: 2.8rem;
+            }
+        }
+
+        .hero-logo::before {
+            content: "CONOVERELLA";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            -webkit-text-stroke: 2px white;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-description {
+                font-size: 0.9rem;
+            }
+        }
+
+        .shop-btn {
+            background-color: #000;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .shop-btn:hover {
+            background-color: #333;
+        }
+
+        /* Shipping Info Section */
+        .shipping-info {
+            padding: 30px 0;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .info-box {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .info-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .info-title {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 1250px) {
+            .info-title {
+                font-size: 1rem;
+            }
+        }
+
+        .info-text {
+            font-size: 0.8rem;
+            margin: 0;
+        }
+
+        /* Product Grid Layout */
+        .product-showcase {
+            padding: 50px 0 80px;
+            background-color: #000;
+            position: relative;
+        }
+
+        .grid-container {
+            width: 100%;
+            max-width: 1200px;
+            position: relative;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .grid-slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .grid-slide.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            position: relative;
+        }
+
+        .left-column {
+            display: grid;
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #e60000;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .left-column .product-card {
+            aspect-ratio: 4/3;
+        }
+
+        .right-column .product-card {
+            
+            height: 100%;
+        }
+
+        .product-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 30px;
+            z-index: 2;
+        }
+
+        .product-title {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            max-width: 80%;
+        }
+
+        .shop-now {
+            background: #000;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .product-image {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+        }
+
+        /* Navigation Arrows */
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prev {
+            left: -20px;
+        }
+
+        .next {
+            right: -20px;
+        }
+
+        /* Dots Navigation */
+        .dots-nav {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #666;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+        @media (max-width: 768px) {
+            .grid-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .product-title {
+                font-size: 2rem;
+            }
+
+            .nav-arrow {
+                width: 30px;
+                height: 30px;
+                left: 10px;
+            }
+
+            .next {
+                left: auto;
+                right: 10px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: white;
+            padding: 50px 0 0;
+        }
+
+        .footer-logo {
+            font-family: 'Times New Roman', serif;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-logo::before {
+            content: "CONOVERELLA";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .footer-title {
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .payment-methods img {
+            height: 40px;
+            padding: 5px;
+            border-radius: 5px;
+            width: 60px;
+        }
+
+        .copyright {
+            background-color: #000;
+            padding: 15px 0;
+            margin-top: 30px;
+            border-top: 1px solid #fff;
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-2 col-md-1">
+                    <button class="btn text-white p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <div class="col-1 d-none d-md-block">
+                    <button class="btn text-white p-0"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+                <div class="col-1 d-none d-md-block">
+                    <button class="btn text-white p-0"><i class="fas fa-heart"></i></button>
+                </div>
+                <div class="col-1 d-none d-md-block">
+                    <button class="btn text-white p-0"><i class="fas fa-user"></i></button>
+                </div>
+                <div class="col-7 col-md-4 text-center">
+                    <h1 class="logo"><span class="logo-text">CONOVERELLA</span></h1>
+                    <div class="tagline">BECOME THE BETTER VERSION OF YOURSELF</div>
+                </div>
+                <div class="col-3 col-md-4 d-none d-md-block">
+                    <div class="search-box">
+                        <input type="text" placeholder="What are you looking for?">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">CONOVERELLA</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex mb-3">
+                <button class="btn btn-dark me-2"><i class="fas fa-shopping-cart"></i></button>
+                <button class="btn btn-dark me-2"><i class="fas fa-heart"></i></button>
+                <button class="btn btn-dark"><i class="fas fa-user"></i></button>
+            </div>
+            <a href="#" class="mobile-nav-link">HOME</a>
+            <a href="#" class="mobile-nav-link">MEN</a>
+            <a href="#" class="mobile-nav-link">WOMEN</a>
+            <a href="#" class="mobile-nav-link">ACCESSORIES</a>
+            <a href="#" class="mobile-nav-link">NEW ARRIVALS</a>
+            <a href="#" class="mobile-nav-link">SALE</a>
+            <a href="#" class="mobile-nav-link">CONTACT US</a>
+            <a href="#" class="mobile-nav-link">ABOUT US</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <div class="main-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Desktop Navigation -->
+                    <div class="desktop-nav">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">MEN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">WOMEN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ACCESSORIES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">NEW ARRIVALS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SALE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CONTACT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ABOUT US</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Mobile Navigation (Placeholder - actual menu is in the offcanvas) -->
+                    <div class="mobile-nav text-center">
+                        <span>CONOVERELLA FASHION</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('/placeholder.svg?height=600&width=1200')">
+                <div class="carousel-overlay">
+                    <div class="hero-content">
+                        <h2 class="welcome-text">Welcome to</h2>
+                        <h1 class="hero-logo">CONOVERELLA</h1>
+                        <p class="hero-description">
+                            Discover a world of luxury fashion at your fingertips. At Conoverella, we bring you premium, stylish, and effortlessly chic clothing designed for those who want to dress fast and shine instantly.
+                        </p>
+                        <p class="hero-description">Shop now and become the best version of yourself!</p>
+                        <button class="shop-btn">SHOP NOW!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/placeholder.svg?height=600&width=1200&text=Luxury+Fashion')">
+                <div class="carousel-overlay">
+                    <div class="hero-content">
+                        <h2 class="welcome-text">Luxury Fashion</h2>
+                        <h1 class="hero-logo">CONOVERELLA</h1>
+                        <p class="hero-description">
+                            Whether you're looking for timeless elegance or modern sophistication, we have the perfect pieces to elevate your wardrobe.
+                        </p>
+                        <button class="shop-btn">EXPLORE NOW</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/placeholder.svg?height=600&width=1200&text=New+Collection')">
+                <div class="carousel-overlay">
+                    <div class="hero-content">
+                        <h2 class="welcome-text">New Collection</h2>
+                        <h1 class="hero-logo">SPRING 2025</h1>
+                        <p class="hero-description">
+                            Discover our latest arrivals and refresh your style with our new spring collection. Bold colors, elegant designs, and premium quality.
+                        </p>
+                        <button class="shop-btn">VIEW COLLECTION</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+    </div>
+
+    <!-- Shipping Info Section -->
+    <div class="shipping-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div>
+                            <h3 class="info-title">FREE SHIPPING</h3>
+                            <p class="info-text">FREE SHIPPING TO ALL PH ORDER OR ORDER ABOVE $150</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <div>
+                            <h3 class="info-title">30 DAYS RETURN</h3>
+                            <p class="info-text">SIMPLY RETURN IT WITHIN 30 DAYS FOR AN EXCHANGE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <h3 class="info-title">100% PAYMENT SECURITY</h3>
+                            <p class="info-text">We guarantee safe transactions, secure checkout, and fraud protection, giving you peace of mind while you shop.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Showcase with Grid Layout -->
+    <div class="product-showcase border-bottom">
+        <div class="grid-container">
+            <!-- Navigation Arrows -->
+            <button class="nav-arrow prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-arrow next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Slide 1 -->
+            <div class="grid-slide active" data-slide="0">
+                <div class="grid-wrapper">
+                    <!-- Left Column -->
+                    <div class="left-column">
+                        <!-- Women's Shoes -->
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h2 class="product-title">Women's Shoes</h2>
+                                <p class="product-description">Walk with confidence. Shine with style.</p>
+                                <button class="shop-now">SHOP NOW!</button>
+                            </div>
+                            <img src="pic/slide pics/women shoe 1.png" alt="Women's Shoes" class="product-image">
+                        </div>
+
+                        <!-- Men's Wear -->
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h2 class="product-title">Men's Wear</h2>
+                                <p class="product-description">Wear success. Own your style.</p>
+                                <button class="shop-now">SHOP NOW!</button>
+                            </div>
+                            <img src="/pic/slide pics/menswear 1.png" alt="Men's Wear" class="product-image">
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="right-column">
+                        <!-- Women's Sunglasses -->
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h2 class="product-title">Women's Sunglasses</h2>
+                                <p class="product-description">Designed for both elegance and UV protection, our sunglasses are luxurious and flattering.</p>
+                                <p class="product-description">Protect yourself from harmful rays. Shine effortlessly.</p>
+                                <button class="shop-now">SHOP NOW!</button>
+                            </div>
+                            <img src="/pic/slide pics/sunglasses women.jpg" alt="Women's Sunglasses" class="product-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="grid-slide" data-slide="1">
+                <div class="grid-wrapper">
+                    <!-- Left Column -->
+                    <div class="left-column">
+                        <!-- Accessories -->
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h2 class="product-title">Accessories</h2>
+                                <p class="product-description">Complete your look with our premium accessories.</p>
+                                <button class="shop-now">SHOP NOW!</button>
+                            </div>
+                            <img src="/pic/slide pics/sunglasses women.jpg" alt="Accessories" class="product-image">
+                        </div>
+
+                        <!-- Handbags -->
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h2 class="product-title">Handbags</h2>
+                                <p class="product-description">Carry your essentials in style.</p>
+                                <button class="shop-now">SHOP NOW!</button>
+                            </div>
+                            <img src="/pic/slide pics/women shoe 1.png" alt="Handbags" class="product-image">
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="right-column">
+                        <!-- Formal Wear -->
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h2 class="product-title">Formal Wear</h2>
+                                <p class="product-description">Make a statement at your next special occasion with our elegant formal wear collection.</p>
+                                <p class="product-description">Sophistication in every detail.</p>
+                                <button class="shop-now">SHOP NOW!</button>
+                            </div>
+                            <img src="/pic/slide pics/menswear 1.png" alt="Formal Wear" class="product-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="grid-slide" data-slide="2">
+                <div class="grid-wrapper">
+                    <!-- Left Column -->
+                    <div class="left-column">
+                        <!-- New Arrivals -->
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h2 class="product-title">New Arrivals</h2>
+                                <p class="product-description">Be the first to discover our latest collections.</p>
+                                <button class="shop-now">SHOP NOW!</button>
+                            </div>
+                            <img src="/pic/slide pics/women shoe 1.png" alt="New Arrivals" class="product-image">
+                        </div>
+
+                        <!-- Sale Items -->
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h2 class="product-title">Sale Items</h2>
+                                <p class="product-description">Luxury fashion at special prices.</p>
+                                <button class="shop-now">SHOP NOW!</button>
+                            </div>
+                            <img src="/pic/slide pics/sunglasses women.jpg" alt="Sale Items" class="product-image">
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="right-column">
+                        <!-- Seasonal Collection -->
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h2 class="product-title">Spring Collection</h2>
+                                <p class="product-description">Embrace the season with our curated collection of spring essentials.</p>
+                                <p class="product-description">Fresh colors, light fabrics, and timeless designs.</p>
+                                <button class="shop-now">SHOP NOW!</button>
+                            </div>
+                            <img src="/pic/slide pics/menswear 1.png" alt="Spring Collection" class="product-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dots Navigation -->
+            <div class="dots-nav">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="footer-logo">CONOVERELLA</div>
+                    <div class="social-icons mb-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h4 class="footer-title">Customer Service</h4>
+                    <p>Address: #7 El Monteverde Subd., Brgy. San Juan, Taytay, Rizal, Philippines</p>
+                    <p>Contact Us<br>
+                    Mobile #: +63453065143<br>
+                    Email: conoverellafashion@gmail.com</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h4 class="footer-title">Policies</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h4 class="footer-title">Quick links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Track your order</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="payment-methods">
+                        <img src="pic/footer pics/footerpics/Paypal.jpg" alt="PayPal">
+                        <img src="pic/footer pics/footerpics/MasterCard.png" alt="Mastercard">
+                        <img src="pic/footer pics/footerpics/Maestro.png" alt="Maestro">
+                        <img src="pic/footer pics/footerpics/Visa.png" alt="Visa">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <div class="container">
+                <p>© 2025, Conoverella - Elevating Fashion, Empowering Confidence | Powered by Figma</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS for Product Grid Carousel -->
+    <script>
+        // Add carousel functionality for product grid
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.grid-slide');
+            const dots = document.querySelectorAll('.dots-nav .dot');
+            const prev = document.querySelector('.product-showcase .prev');
+            const next = document.querySelector('.product-showcase .next');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function updateDots(index) {
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[index].classList.add('active');
+            }
+
+            function showSlide(index) {
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                slides[index].classList.add('active');
+                currentSlide = index;
+                updateDots(currentSlide);
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+
+            prev.addEventListener('click', () => {
+                showSlide((currentSlide - 1 + totalSlides) % totalSlides);
+            });
+
+            next.addEventListener('click', () => {
+                showSlide((currentSlide + 1) % totalSlides);
+            });
+
+            // Auto-rotate slides every 5 seconds
+            setInterval(() => {
+                showSlide((currentSlide + 1) % totalSlides);
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
