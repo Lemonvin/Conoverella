@@ -47,6 +47,9 @@
 }
 #sidebar button,#cart button{
     cursor: pointer;
+    background-color: white;
+    border: none;
+    font-size: 50px;
 }
 #sidebar.open{
     left: 0;
@@ -59,6 +62,9 @@
     background-color: white;
     right: -300px;
     transition: 0.75s right ease-in-out;
+}
+#cart button{
+    float: right;
 }
 #cart.open{
     right: 0;
@@ -147,6 +153,21 @@
 
 .search button:hover img {
     transform: scale(1.1);
+}
+#searchbar{
+    height: 135px;
+    z-index: 100;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#searchbar button{
+    background-color: white;
+    border: none;
+    font-size: 25px;
+    margin-bottom: -22px;
 }
 
 /* Navigation Bar */
