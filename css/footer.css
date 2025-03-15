@@ -8,13 +8,18 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    gap: 100px;
     background-color: black;
     height: 100%;
     border-top: 1px solid white;
     padding: 20px;
     font-size: 12px;
     flex-wrap: wrap;
+}
+.footer-text{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
 }
 
 /* Social Section */
@@ -26,7 +31,7 @@ footer {
     padding-bottom: 20px;
 }
 
-.company-name {
+.footer-logo {
     font-family: "Tilt Prism", sans-serif;
     font-size: 40px;
     margin-bottom: 5px;
@@ -54,51 +59,44 @@ footer {
 }
 
 /* Sections: Policies, Contacts, Links */
-.politics,
+.policy,
 .contacts,
 .links {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     padding-bottom: 20px;
     width: 250px;
-    width: 250px;
 }
-.politics-title,
-.contacts-title,
-.links-title {
+.links{
+    text-align: center;
+}
+.footer-title{
     color: white;
-    font-size: 14px;
-    font-weight: bold;
 }
+.footer-links{
+    display: inline;
 
-.social a,
-.politics a,
-.links a,
-.contacts p {
-    color: gray;
-    margin: 0;
+}
+.footer-links a{
+    margin: -10px 0;
+}
+.footer-links a,.contacts p{
+    color: white;
     text-decoration: none;
-    transition: color 0.2s ease-in-out;
+    color: gray;
+    font-size: 1rem;
 }
 
-.politics a:hover,
-.links a:hover {
-    color: white;
-}
 
 /* Copyright Section */
-.copyright {
+.copyright{
     background-color: black;
-    height: 80px;
     border-top: 1px solid white;
-    color: gray;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    color:gray;
     align-items: center;
-    font-size: 11px;
-    text-align: center;
+    padding: 15px 0;
 }
 
 /* Payment Icons */

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conoveralla</title>
     <link rel="stylesheet" href="css/Home.css">
-    <link rel="stylesheet" href="css/slideshow.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
 
 </head>
-<script src="../JS/header.js"></script>
 <body>
     <nav>
         <div id="sidebar">
@@ -111,28 +109,60 @@
                     </div>
                 </div>
             </div>
-                <div class="slideshow-container">
-                    <div class="slides">
-                        <div class="slides-pic">
-                            <div class="left">
-                                <img class="item1" src="pic\slide pics\women shoe 1.png">
-                                <img class="item2" src="pic\slide pics\menswear 1.png">
-                            </div>
-                            <div class="right">
-                                <img class="item3" src="pic\slide pics\sunglasses women.jpg">
-                            </div>
+            <div class="slideshow-container">
+                <div class="slides-wrapper">
+        
+                    <!-- Slide 1 -->
+                    <div class="slide">
+                        <div class="left-column">
+                            <img src="/pic/slide pics/women shoe 1.png" alt="Left Top 1">
+                            <img src="/pic/slide pics/sunglasses women.jpg" alt="Left Bottom 1">
+                        </div>
+                        <div class="right-column">
+                            <img src="/pic/slide pics/menswear 1.png" alt="Right 1">
                         </div>
                     </div>
-                        <button>&#10094;</button>
-                        <button>&#10095;</button>
-                </div>       
+        
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <div class="left-column">
+                            <img src="/pic/slide pics/men watch 1.png" alt="Left Top 2">
+                            <img src="/pic/slide pics/men shoe.jpg" alt="Left Bottom 2">
+                        </div>
+                        <div class="right-column">
+                            <img src="/pic/slide pics/men suit.jpg" alt="Right 2">
+                        </div>
+                    </div>
+        
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <div class="left-column">
+                            <img src="pic/slide pics/perfume.jpg" alt="Left Top 3">
+                            <img src="image3b.jpg" alt="Left Bottom 3">
+                        </div>
+                        <div class="right-column">
+                            <img src="pic/slide pics/ring.jpg" alt="Right 3">
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <!-- Navigation Arrows -->
+                <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+                <div class="next" onclick="moveSlide(1)">&#10095;</div>
+        
+                <!-- Dots -->
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
             </div>
-        </div>
     </main>
     <footer>
         <div class="footer-container">
             <div class="social">
-                <h1 class="company-name">Conoveralla</h1>
+                <h1 class="footer-logo">Conoveralla</h1>
                 <div class="social-container">
                     <img src="pic\footer pics\fb.png" alt="fb logo">
                     <img src="pic\footer pics\in.png" alt="in logo">
@@ -140,31 +170,34 @@
                     <img src="pic\footer pics\ig.png" alt="ig logo">
                 </div>
             </div>
-            <div class="contacts">
-                <a class="contacts-title">Customer Service</a>
-                    <p>Address: #7 El Monteverde Subd., Brgy. San Juan, Taytay, Rizal, Philippines</p>
-                <div class="contact-number">
-                    <p>Contact Us:</p>
-                    <p>Mobile #: +63453065143</p>
-                    <p>Email: conoverellafkae@gmail.com</p>
+            <div class="footer-text">
+                <div class="contacts">
+                    <h3 class="footer-title">Customer Service</h3>
+                    <p>Address: #7 El Monteverde Subd., Brgy. San Juan, Taytay, Rizal, Philippines</p>
+                    <p>Contact Us:<br>
+                    Mobile #: +63453065143<br>  
+                    Email: conoverellafkae@gmail.com</p>
                 </div>
+                <div class="policy">
+                    <h3 class="footer-title">Policy</h3>
+                    <ul class="footer-links">
+                        <li><a>Term of service</a></li>
+                        <li><a>Shipping Policy</a></li>
+                        <li><a>Privacy policy</a></li>
+                        <li><a>Refund policy</a></li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a>About us</a></li>
+                        <li><a>Contact</a></li>
+                        <li><a>Many stilted quistions</a></li>
+                        <li><a>Track your order</a></li>
+                    </ul>
+                </div>  
             </div>
-            <div class="politics">
-                <p class="politics-title">Politics</p>
-                <a>Term of service</a>
-                <a>Shipping Policy</a>
-                <a>Privacy policy</a>
-                <a>Refund policy</a>
-                <a>Payment options</a>
             </div>
-            <div class="links">
-                <p class="links-title">Quick links</p>
-                <a>About us</a>
-                <a>Contact</a>
-                <a>Many stilted questions</a>
-                <a>Track your order</a>
-            </div>  
-        </div>
         <div class="copyright">
             <div class="payment-links">
                 <img src="pic\footer pics\paypal.png" alt="paypal.png">
@@ -176,4 +209,40 @@
         </div>
     </footer>    
 </body>
+<script src="../JS/header.js"></script>
+<script>
+    let slideIndex = 0;
+
+    function showSlides(index) {
+    const slidesWrapper = document.querySelector('.slides-wrapper');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    if (index >= totalSlides) slideIndex = 0;
+    if (index < 0) slideIndex = totalSlides - 1;
+
+    slidesWrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[slideIndex].classList.add('active');
+}
+
+function moveSlide(step) {
+    slideIndex += step;
+    showSlides(slideIndex);
+}
+
+function currentSlide(index) {
+    slideIndex = index;
+    showSlides(slideIndex);
+}
+
+// Auto-slide every 5 seconds
+setInterval(() => moveSlide(1), 5000);
+
+// Initialize the slideshow
+showSlides(slideIndex);
+
+
+    </script>
 </html>

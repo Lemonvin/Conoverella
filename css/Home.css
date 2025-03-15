@@ -107,7 +107,124 @@ html, body {
 .policy img {
     height: 50px;
 }
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background-color: black;
+}
 
+/* Slides Wrapper (flex for horizontal slide movement) */
+.slides-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Each Slide */
+.slide {
+    display: flex;
+    width: 100%;
+    flex: 0 0 100%;
+    height: 600px; /* adjust height */
+    gap: 10px;
+}
+
+/* Left Column with two stacked images */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+}
+
+.left-column img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+/* Right Column with big image */
+.right-column {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.right-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
+    z-index: 10;
+    user-select: none;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots Navigation */
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .slide {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+
+    .left-column {
+        flex-direction: row;
+    }
+
+    .left-column img {
+        height: auto;
+    }
+
+    .right-column img {
+        height: auto;
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .section-1-welcome, .section-1-title {
