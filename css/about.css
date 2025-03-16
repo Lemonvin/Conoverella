@@ -3,6 +3,7 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    font-family: "jersey 15",sans-serif ;
 }
 
 /* MAIN CONTAINER */
@@ -63,24 +64,38 @@ html, body {
 .promise-vision {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: stretch; /* fixes the white space issue */
+    width: 100%;
+    height: auto;
+}
+
+.promise-vision-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 250px;
+    height: 100%;
+    width: 100%;
 }
 
 .promise-vision img {
-    height: 250px;
+    height: 100%;
     width: 100%;
-    max-width: 800px;
     object-fit: cover;
+    display: block;
 }
 
-.promise-vision-1,
-.promise-vision-2,
-.promise-vision-3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+
+#promise-vision-1 {
+    background-color: rgb(128,216,191);
+}
+
+#promise-vision-2 {
+    background-color: rgba(228,127,127,255);
+}
+
+#promise-vision-3 {
+    background-color: rgba(255,189,238,255);
 }
 
 .promise-vision p {
@@ -136,7 +151,6 @@ html, body {
     cursor: pointer;
     transition: 0.15s transform, 0.15s color;
 }
-
 .join-wrapper p:hover {
     transform: scale(1.1);
     color: white;
@@ -152,11 +166,6 @@ html, body {
     .promise-vision p {
         width: 90%;
         font-size: 18px;
-    }
-
-    .promise-vision {
-        grid-template-columns: 1fr;
-        height: auto;
     }
 
     .promise-vision img {
