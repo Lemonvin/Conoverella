@@ -12,11 +12,12 @@ footer {
     background-color: black;
     height: 100%;
     border-top: 1px solid white;
-    padding: 20px;
+    padding: 1.25rem; /* 20px converted to rem for scalability */
     font-size: 12px;
     flex-wrap: wrap;
 }
-.footer-text{
+
+.footer-text {
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -28,7 +29,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem; /* 20px */
 }
 
 .footer-logo {
@@ -64,37 +65,51 @@ footer {
 .links {
     display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem; /* 20px */
     width: 250px;
 }
-.links{
+
+.links,
+.policy {
     text-align: center;
 }
-.footer-title{
-    color: white;
-}
-.footer-links{
-    display: inline;
 
-}
-.footer-links a{
-    margin: -10px 0;
-}
-.footer-links a,.contacts p{
+.footer-title {
     color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: inline;
+}
+
+.footer-links a {
+    margin: -10px 0;
+    color: gray;
     text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.contacts p {
     color: gray;
     font-size: 1rem;
 }
 
-
 /* Copyright Section */
-.copyright{
+.copyright {
     background-color: black;
     border-top: 1px solid white;
     display: flex;
     flex-direction: column;
-    color:gray;
+    color: gray;
     align-items: center;
     padding: 15px 0;
 }
@@ -126,14 +141,18 @@ footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 50px;
     }
-
+    .footer-text{
+        flex-direction: column;
+    }
     .social,
-    .politics,
+    .policy,
     .contacts,
     .links {
         width: 100%;
         max-width: 300px;
+        
     }
 
     .social-container {

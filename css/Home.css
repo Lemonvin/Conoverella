@@ -72,7 +72,7 @@ html, body {
 }
 
 /* Policies Section */
-.policies {
+.shipping-policies {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -83,17 +83,20 @@ html, body {
     border-bottom:5px solid gray;
 }
 
-.policy {
+.shipping-policy {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 20px;
     word-spacing: 3px;
-    max-width: 350px;
+    width: 400px;
     text-align: left;
+}
+.shipping-policy img{
+    height: 50px;
 }
 
 .policy-title {
-    font-size: 25px;
     font-weight: bold;
 }
 
@@ -241,10 +244,7 @@ html, body {
         height: 35px;
         font-size: 12px;
     }
-    .policies{
+    .shipping-policies{
         flex-direction: column;
-    }
-    #policy-payment-secure{
-        margin-left: 50px;
     }
 }
