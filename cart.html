@@ -1,0 +1,160 @@
+<style>
+    #cart{
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        width: 500px;
+        height: 80%;
+        align-items: center;
+        gap: 20px;
+        padding: 0 15px;
+        overflow-y: scroll;
+    }
+    #cart h1{
+        font-size: 40px;
+    }
+    input[type="checkbox"]{
+        background-color: gray;
+    }
+    .close-btn{
+        width: 40px;
+        font-size: 25px;
+        background-color: black;
+        border: none;
+        color:white;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+    }
+    .select-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: gray;
+        color: black;
+        font-size: 12px;
+        width: 100%;
+        height: 25px;
+        align-items: center;
+    }
+    .select-container button{
+        background-color: gray;
+        border: none;
+        cursor: pointer;
+    }
+    .select-container img{
+        height: 20px;
+    }
+    .delete-wrapper{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+    }
+    
+    .cart-product{
+        display: flex;
+        background-color: gray;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cart-product img{
+        height: 40px;
+    }
+    .product-selector{
+        display: flex;
+        align-items: center;
+    }
+    .cart-btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .product-manage button{
+        background-color: gray;
+        border: none;
+        cursor: pointer;
+    }
+    .product-manage img{
+        height: 25px;
+        
+    }
+    .quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+    width: 90px;
+    height: 23px;
+    border-radius: 20px;
+    color: black;
+    overflow: hidden; 
+    }
+
+.quantity-container button {
+    flex: 1; 
+    font-size: 20px;
+    cursor: pointer;
+    background-color: gray;
+    border: none;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-container p {
+    flex: 1; 
+    text-align: center;
+    margin: 0;
+}
+
+.quantity-container .minus {
+    border-right: 1px solid black;
+}
+
+.quantity-container .add {
+    border-left: 1px solid black;
+}
+</style>
+<div id="cart">
+    <button onclick="closeSidebar('cart')" class="close-btn">&times;</button>
+    <h1>Shopping Cart</h1> 
+    <div class="select-container">
+        <div class="select-all-wrapper">
+            <input type="checkbox" name="select-all">
+            <label for="select-all">SELECT ALL ITEMS<span class="items-num">()</span></label>
+        </div>
+        <div class="delete-wrapper">
+            <img src="pic\cart-pics\trash.png" alt="trashbin-icon">
+            <button>DELETE</button>
+        </div>
+    </div>
+    <div class="cart-product">
+        <div class="product-selector">
+            <input type="checkbox">
+            <img src="pic\slide-pics\menswear 1.png" alt="product-pic">
+        </div>
+        <div class="product-card">
+            <p class="product-name">Thiago-Warch for Men - Cool Black</p>
+            <p>c2
+            </p>
+            <p class="product-price">$ 5,000</p>
+        </div>
+        <div class="cart-btn">
+            <div class="product-manage">
+                <button><img src="pic\cart-pics\like.png" alt="heart"></button>
+                <button><img src="pic\cart-pics\gift.png" alt="gift"></button>
+                <button><img src="pic\cart-pics\trash.png" alt="trashbin"></button>
+            </div>
+
+            <div class="quantity-container">
+                <button class="minus">-</button>
+                <p>1</p>
+                <button class="add">+</button>
+            </div>
+        </div>
+    </div>
+</div>
