@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conoverella</title>
+  <link rel="stylesheet" href="/css/admin.css" />
+</head>
+<body>
+  <div class="admin-sidebar">
+    <div class="admin-sidebar-title">
+      <h1>Conoverella</h1>
+    </div>
+    <div class="sidebar-selector-wrapper">
+      <a class="sidebar-selector active">
+        <img src="/pic/admin-pic/home-active.png" data-default="/pic/admin-pic/home (1).png" data-active="/pic/admin-pic/home-active.png" />
+        <span>Dashboard</span>
+      </a>
+      <a class="sidebar-selector">
+        <img src="/pic/header-pics/shopping-cart.png" data-default="/pic/header-pics/shopping-cart.png" data-active="/pic/sidebar-pics/grocery-store.png" />
+        <span>Products</span>
+      </a>
+      <a class="sidebar-selector">
+        <img src="/pic/admin-pic/customer.png" data-default="/pic/admin-pic/customer.png" data-active="/pic/admin-pic/customer-active.png" />
+        <span>Customer</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- DASHBOARD DISPLAY -->
+  <div class="admin-home-display">
+    <div class="admin-main">
+      <div class="admin-home-header">
+        <div class="header-title-wrapper">
+          <p>Admin / Dashboard</p>
+          <h1>Main Dashboard</h1>
+        </div>
+        <div class="header-searchbar-wrapper">
+          <div class="header-searchbar">
+            <img src="/pic/admin-pic/search.png" alt="Search Icon" class="search-icon" />
+            <input type="search" placeholder="Search" />
+          </div>
+          <div class="notification-container">
+            <button class="notification-btn">
+              <img src="/pic/admin-pic/bell.png" alt="Notification Bell" />
+              <span class="notification-count">3</span>
+            </button>
+          </div>
+          <a class="info-btn"><img src="/pic/admin-pic/info.png" /></a>
+          <img class="admin-profile-pic" src="/pic/slide-pics/ring.jpg" />
+        </div>
+      </div>
+
+      <div class="admin-home">
+        <div class="admin-home-top">
+          <div class="home-entity">
+            <div class="entity-icon"><img src="/pic/admin-pic/statisctic.png" /></div>
+            <div class="entity-text">
+              <p>Earnings</p>
+              <h3 class="earning-price">$350.4</h3>
+            </div>
+          </div>
+          <div class="home-entity">
+            <div class="entity-icon">
+              <img src="/pic/admin-pic/dollar-symbol.png" style="filter: invert(1) brightness(2);" />
+            </div>
+            <div class="entity-text">
+              <p>Spend this month</p>
+              <h3 class="montly-spending">$682.5</h3>
+            </div>
+          </div>
+          <div class="home-entity">
+            <div class="entity-icon"><img src="/pic/admin-pic/statisctic.png" /></div>
+            <div class="entity-text">
+              <p>Sales</p>
+              <h3>$574.34</h3>
+              <p class="sales-earnings"><span>+23% </span>since last month</p>
+            </div>
+          </div>
+          <div class="home-entity">
+            <div class="entity-icon" style="background: linear-gradient(to right, #4481EB, #04BEFE);">
+              <img src="/pic/admin-pic/task.png" />
+            </div>
+            <div class="entity-text">
+              <p>New Task</p>
+              <h3 class="task-num">154</h3>
+            </div>
+          </div>
+          <div class="home-entity">
+            <div class="entity-icon"><img src="/pic/admin-pic/product.png" /></div>
+            <div class="entity-text">
+              <p>Total products</p>
+              <h3 class="product-num">2935</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-line-chart">
+          <div class="line-chart-wrapper">
+            <div style="margin-bottom: 10px;">This month</div>
+            <h2>$37.5K</h2>
+            <p style="color: #2ECC71;">+2.45% • On track</p>
+            <canvas id="spendingChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS DISPLAY -->
+  <div class="admin-product-display">
+    <div class="admin-products">
+      <div class="admin-home-header">
+        <div class="header-title-wrapper">
+          <p>Admin / Products</p>
+          <h1>Product Overview</h1>
+        </div>
+        <div class="header-searchbar-wrapper">
+          <div class="header-searchbar">
+            <img src="/pic/admin-pic/search.png" alt="Search Icon" class="search-icon" />
+            <input type="search" placeholder="Search" />
+          </div>
+          <div class="notification-container">
+            <button class="notification-btn">
+              <img src="/pic/admin-pic/bell.png" alt="Notification Bell" />
+              <span class="notification-count">3</span>
+            </button>
+          </div>
+          <a class="info-btn"><img src="/pic/admin-pic/info.png" /></a>
+          <img class="admin-profile-pic" src="/pic/slide-pics/ring.jpg" />
+        </div>
+      </div>
+    </div>
+    <!-- Add your product management UI here -->
+  </div>
+
+  <!-- CUSTOMER DISPLAY -->
+  <div class="admin-customer-display">
+    <div class="admin-customer">
+      <div class="admin-home-header">
+        <div class="header-title-wrapper">
+          <p>Admin / Customer</p>
+          <h1>Customer Overview</h1>
+        </div>
+        <div class="header-searchbar-wrapper">
+          <div class="header-searchbar">
+            <img src="/pic/admin-pic/search.png" alt="Search Icon" class="search-icon" />
+            <input type="search" placeholder="Search" />
+          </div>
+          <div class="notification-container">
+            <button class="notification-btn">
+              <img src="/pic/admin-pic/bell.png" alt="Notification Bell" />
+              <span class="notification-count">3</span>
+            </button>
+          </div>
+          <a class="info-btn"><img src="/pic/admin-pic/info.png" /></a>
+          <img class="admin-profile-pic" src="/pic/slide-pics/ring.jpg" />
+        </div>
+      </div>
+    </div>
+    <!-- Add your customer management UI here -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const selectors = document.querySelectorAll('.sidebar-selector');
+    const displays = {
+      'Dashboard': document.querySelector('.admin-home-display'),
+      'Products': document.querySelector('.admin-product-display'),
+      'Customer': document.querySelector('.admin-customer-display')
+    };
+
+    selectors.forEach(selector => {
+      selector.addEventListener('click', () => {
+        selectors.forEach(item => {
+          item.classList.remove('active');
+          const img = item.querySelector('img');
+          img.src = img.getAttribute('data-default');
+        });
+
+        selector.classList.add('active');
+        const img = selector.querySelector('img');
+        img.src = img.getAttribute('data-active');
+
+        const selectedPage = selector.querySelector('span').innerText.trim();
+        for (const page in displays) {
+          displays[page].style.display = (page === selectedPage) ? 'block' : 'none';
+        }
+      });
+    });
+
+    // Initial display setup
+    displays['Dashboard'].style.display = 'block';
+
+    // Chart.js Line Chart
+    const ctx = document.getElementById('spendingChart').getContext('2d');
+    const spendingChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['SEP', 'OCT', 'NOV', 'DEC', 'JAN', 'FEB'],
+        datasets: [
+          {
+            label: 'Line 1',
+            data: [70, 60, 108, 72, 110, 115],
+            borderColor: '#8A5AFB',
+            backgroundColor: 'transparent',
+            tension: 0.4,
+            pointBackgroundColor: '#fff',
+            pointBorderWidth: 2,
+            pointRadius: 5,
+            fill: false
+          },
+          {
+            label: 'Line 2',
+            data: [50, 30, 70, 50, 60, 80],
+            borderColor: '#00C8FF',
+            backgroundColor: 'transparent',
+            tension: 0.4,
+            pointRadius: 0,
+            fill: false
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: (context) => `$${context.parsed.y}`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: { color: '#ccc' }
+          },
+          y: { display: false }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
