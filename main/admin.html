@@ -1,333 +1,342 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Conoverella</title>
-  <link rel="stylesheet" href="/css/admin.css" />
-  </style>
-</head>
-<body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conoverella</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+    </style>
+  </head>
+  <body>
 
-  <!-- SIDEBAR -->
-  <div class="admin-sidebar">
-    <div class="admin-sidebar-title">
-      <h1>Conoverella</h1>
-    </div>
-    <div class="sidebar-selector-wrapper">
-      <a class="sidebar-selector active">
-        <img src="/pic/admin-pic/home-active.png" data-default="/pic/admin-pic/home (1).png" data-active="/pic/admin-pic/home-active.png" />
-        <span>Dashboard</span>
-      </a>
-      <a class="sidebar-selector">
-        <img src="/pic/header-pics/shopping-cart.png" data-default="/pic/header-pics/shopping-cart.png" data-active="/pic/sidebar-pics/grocery-store.png" />
-        <span>Products</span>
-      </a>
-      <a class="sidebar-selector">
-        <img src="/pic/admin-pic/customer.png" data-default="/pic/admin-pic/customer.png" data-active="/pic/admin-pic/customer-active.png" />
-        <span>Customer</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- DASHBOARD -->
-  <section class="admin-home-display">
-    <div class="admin-main">
-      <div class="admin-home-header">
-        <div class="header-title-wrapper">
-          <p>Admin / Dashboard</p>
-          <h1>Main Dashboard</h1>
-        </div>
-        <div class="header-searchbar-wrapper">
-          <div class="header-searchbar">
-            <img src="/pic/admin-pic/search.png" class="search-icon" />
-            <input type="search" placeholder="Search" />
-          </div>
-          <div class="notification-container">
-            <button class="notification-btn">
-              <img src="/pic/admin-pic/bell.png" />
-              <span class="notification-count">3</span>
-            </button>
-          </div>
-          <a class="info-btn"><img src="/pic/admin-pic/info.png" /></a>
-          <img class="admin-profile-pic" src="/pic/slide-pics/ring.jpg" />
-        </div>
+    <!-- SIDEBAR -->
+    <div class="admin-sidebar">
+      <div class="admin-sidebar-title">
+        <h1>Conoverella</h1>
       </div>
+      <div class="sidebar-selector-wrapper">
+        <a class="sidebar-selector active">
+          <img src="/pic/admin-pic/home-active.png" data-default="/pic/admin-pic/home (1).png" data-active="/pic/admin-pic/home-active.png" />
+          <span>Dashboard</span>
+        </a>
+        <a class="sidebar-selector">
+          <img src="/pic/header-pics/shopping-cart.png" data-default="/pic/header-pics/shopping-cart.png" data-active="/pic/sidebar-pics/grocery-store.png" />
+          <span>Products</span>
+        </a>
+        <a class="sidebar-selector">
+          <img src="/pic/admin-pic/customer.png" data-default="/pic/admin-pic/customer.png" data-active="/pic/admin-pic/customer-active.png" />
+          <span>Customer</span>
+        </a>
+      </div>
+    </div>
 
-      <div class="admin-home">
-        <div class="admin-home-top">
-          <div class="home-entity">
-            <div class="entity-icon"><img src="/pic/admin-pic/statisctic.png" /></div>
-            <div class="entity-text">
-              <p>Earnings</p>
-              <h3 class="earning-price">$350.4</h3>
-            </div>
+    <!-- DASHBOARD -->
+    <section class="admin-home-display">
+      <div class="admin-main">
+        <div class="admin-home-header">
+          <div class="header-title-wrapper">
+            <p>Admin / Dashboard</p>
+            <h1>Main Dashboard</h1>
           </div>
-          <div class="home-entity">
-            <div class="entity-icon"><img src="/pic/admin-pic/dollar-symbol.png" class="inverted" /></div>
-            <div class="entity-text">
-              <p>Spend this month</p>
-              <h3 class="montly-spending">$682.5</h3>
+          <div class="header-searchbar-wrapper">
+            <div class="header-searchbar">
+              <img src="/pic/admin-pic/search.png" class="search-icon" />
+              <input type="search" placeholder="Search" />
             </div>
-          </div>
-          <div class="home-entity">
-            <div class="entity-icon"><img src="/pic/admin-pic/statisctic.png" /></div>
-            <div class="entity-text">
-              <p>Sales</p>
-              <h3>$574.34</h3>
-              <p class="sales-earnings"><span>+23% </span>since last month</p>
+            <div class="notification-container">
+              <button class="notification-btn">
+                <img src="/pic/admin-pic/bell.png" />
+                <span class="notification-count">3</span>
+              </button>
             </div>
-          </div>
-          <div class="home-entity">
-            <div class="entity-icon" style="background: linear-gradient(to right, #4481EB, #04BEFE);">
-              <img src="/pic/admin-pic/task.png" />
-            </div>
-            <div class="entity-text">
-              <p>New Task</p>
-              <h3 class="task-num">154</h3>
-            </div>
-          </div>
-          <div class="home-entity">
-            <div class="entity-icon"><img src="/pic/admin-pic/product.png" /></div>
-            <div class="entity-text">
-              <p>Total products</p>
-              <h3 class="product-num">2935</h3>
-            </div>
+            <a class="info-btn"><img src="/pic/admin-pic/info.png" /></a>
+            <img class="admin-profile-pic" src="/pic/slide-pics/ring.jpg" />
           </div>
         </div>
-        <div class="admin-home-body">
-          <div class="home-line-chart">
-            <div class="line-chart-wrapper">
-              <div>
-                <div style="margin-bottom: 10px;">This month</div>
-                <h2>$37.5K</h2>
-                <p style="color: #2ECC71;">+2.45% • On track</p>
+
+        <div class="admin-home">
+          <div class="admin-home-top">
+            <div class="home-entity">
+              <div class="entity-icon"><img src="/pic/admin-pic/statisctic.png" /></div>
+              <div class="entity-text">
+                <p>Earnings</p>
+                <h3 class="earning-price">$350.4</h3>
               </div>
-              <canvas id="spendingChart"></canvas>
             </div>
-          </div>
-          <div class="card">
-            <div class="header">
-              <div>Your Pie Chart</div>
-              <div>Monthly ▾</div>
-            </div>
-            <canvas id="myPieChart" width="200" height="200"></canvas>
-            <div class="legend">
-              <div class="legend-item">
-                <div class="dot purple"></div>
-                <div>Your Files</div>
-                <span>63%</span>
+            <div class="home-entity">
+              <div class="entity-icon"><img src="/pic/admin-pic/dollar-symbol.png" class="inverted" /></div>
+              <div class="entity-text">
+                <p>Spend this month</p>
+                <h3 class="montly-spending">$682.5</h3>
               </div>
-              <div class="legend-item">
-                <div class="dot blue"></div>
-                <div>System</div>
-                <span>25%</span>
+            </div>
+            <div class="home-entity">
+              <div class="entity-icon"><img src="/pic/admin-pic/statisctic.png" /></div>
+              <div class="entity-text">
+                <p>Sales</p>
+                <h3>$574.34</h3>
+                <p class="sales-earnings"><span>+23% </span>since last month</p>
+              </div>
+            </div>
+            <div class="home-entity">
+              <div class="entity-icon" style="background: linear-gradient(to right, #4481EB, #04BEFE);">
+                <img src="/pic/admin-pic/task.png" />
+              </div>
+              <div class="entity-text">
+                <p>New Task</p>
+                <h3 class="task-num">154</h3>
+              </div>
+            </div>
+            <div class="home-entity">
+              <div class="entity-icon"><img src="/pic/admin-pic/product.png" /></div>
+              <div class="entity-text">
+                <p>Total products</p>
+                <h3 class="product-num">2935</h3>
               </div>
             </div>
           </div>
-          <div class="card traffic-card">
-            <div class="traffic-header">
-              <div>
-                <p class="traffic-label">Daily Traffic</p>
-                <h2 class="traffic-value">2.579 <span class="unit">Visitors</span></h2>
+          <div class="admin-home-body">
+            <div class="home-section">
+              <div class="home-line-chart">
+                <div class="line-chart-wrapper">
+                  <div>
+                    <div style="margin-bottom: 10px;">This month</div>
+                    <h2>$37.5K</h2>
+                    <p style="color: #2ECC71;">+2.45% • On track</p>
+                  </div>
+                  <canvas id="spendingChart"></canvas>
+                </div>
               </div>
-              <p class="traffic-growth">+2.45%</p>
+              <div class="card">
+                <div class="header">
+                  <div>Your Pie Chart</div>
+                  <div>Monthly ▾</div>
+                </div>
+                <canvas id="myPieChart" width="200" height="200"></canvas>
+                <div class="legend">
+                  <div class="legend-item">
+                    <div class="dot purple"></div>
+                    <div>Your Files</div>
+                    <span>63%</span>
+                  </div>
+                  <div class="legend-item">
+                    <div class="dot blue"></div>
+                    <div>System</div>
+                    <span>25%</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <canvas id="trafficChart"></canvas>
+            <div class="home-section">
+              <div class="card traffic-card">
+                <div class="traffic-header">
+                  <div>
+                    <p class="traffic-label">Daily Traffic</p>
+                    <h2 class="traffic-value">2.579 <span class="unit">Visitors</span></h2>
+                  </div>
+                  <p class="traffic-growth">+2.45%</p>
+                </div>
+                <canvas id="trafficChart"></canvas>
+              </div>
+              <div class="card product-tracking-card">
+
+              </div>
+            </div>
+            <div class="card order-table">
+
+            </div>
           </div>
-          
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PRODUCTS -->
-  <section class="admin-product-display">
-    <div class="admin-products">
-      <div class="admin-home-header">
-        <div class="header-title-wrapper">
-          <p>Admin / Products</p>
-          <h1>Product Overview</h1>
-        </div>
-        <div class="header-searchbar-wrapper">
-          <div class="header-searchbar">
-            <img src="/pic/admin-pic/search.png" class="search-icon" />
-            <input type="search" placeholder="Search" />
+    <!-- PRODUCTS -->
+    <section class="admin-product-display">
+      <div class="admin-products">
+        <div class="admin-home-header">
+          <div class="header-title-wrapper">
+            <p>Admin / Products</p>
+            <h1>Product Overview</h1>
           </div>
-          <div class="notification-container">
-            <button class="notification-btn">
-              <img src="/pic/admin-pic/bell.png" />
-              <span class="notification-count">3</span>
-            </button>
+          <div class="header-searchbar-wrapper">
+            <div class="header-searchbar">
+              <img src="/pic/admin-pic/search.png" class="search-icon" />
+              <input type="search" placeholder="Search" />
+            </div>
+            <div class="notification-container">
+              <button class="notification-btn">
+                <img src="/pic/admin-pic/bell.png" />
+                <span class="notification-count">3</span>
+              </button>
+            </div>
+            <a class="info-btn"><img src="/pic/admin-pic/info.png" /></a>
+            <img class="admin-profile-pic" src="/pic/slide-pics/ring.jpg" />
           </div>
-          <a class="info-btn"><img src="/pic/admin-pic/info.png" /></a>
-          <img class="admin-profile-pic" src="/pic/slide-pics/ring.jpg" />
         </div>
+        <!-- Add product UI here -->
       </div>
-      <!-- Add product UI here -->
-    </div>
-  </section>
+    </section>
 
-  <!-- CUSTOMERS -->
-  <section class="admin-customer-display">
-    <div class="admin-customer">
-      <div class="admin-home-header">
-        <div class="header-title-wrapper">
-          <p>Admin / Customer</p>
-          <h1>Customer Overview</h1>
-        </div>
-        <div class="header-searchbar-wrapper">
-          <div class="header-searchbar">
-            <img src="/pic/admin-pic/search.png" class="search-icon" />
-            <input type="search" placeholder="Search" />
+    <!-- CUSTOMERS -->
+    <section class="admin-customer-display">
+      <div class="admin-customer">
+        <div class="admin-home-header">
+          <div class="header-title-wrapper">
+            <p>Admin / Customer</p>
+            <h1>Customer Overview</h1>
           </div>
-          <div class="notification-container">
-            <button class="notification-btn">
-              <img src="/pic/admin-pic/bell.png" />
-              <span class="notification-count">3</span>
-            </button>
+          <div class="header-searchbar-wrapper">
+            <div class="header-searchbar">
+              <img src="/pic/admin-pic/search.png" class="search-icon" />
+              <input type="search" placeholder="Search" />
+            </div>
+            <div class="notification-container">
+              <button class="notification-btn">
+                <img src="/pic/admin-pic/bell.png" />
+                <span class="notification-count">3</span>
+              </button>
+            </div>
+            <a class="info-btn"><img src="/pic/admin-pic/info.png" /></a>
+            <img class="admin-profile-pic" src="/pic/slide-pics/ring.jpg" />
           </div>
-          <a class="info-btn"><img src="/pic/admin-pic/info.png" /></a>
-          <img class="admin-profile-pic" src="/pic/slide-pics/ring.jpg" />
         </div>
+        <!-- Add customer UI here -->
       </div>
-      <!-- Add customer UI here -->
-    </div>
-  </section>
+    </section>
 
-  <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    const selectors = document.querySelectorAll('.sidebar-selector');
-    const displays = {
-      'Dashboard': document.querySelector('.admin-home-display'),
-      'Products': document.querySelector('.admin-product-display'),
-      'Customer': document.querySelector('.admin-customer-display')
-    };
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const selectors = document.querySelectorAll('.sidebar-selector');
+      const displays = {
+        'Dashboard': document.querySelector('.admin-home-display'),
+        'Products': document.querySelector('.admin-product-display'),
+        'Customer': document.querySelector('.admin-customer-display')
+      };
 
-    selectors.forEach(selector => {
-      selector.addEventListener('click', () => {
-        selectors.forEach(item => {
-          item.classList.remove('active');
-          const img = item.querySelector('img');
-          img.src = img.getAttribute('data-default');
+      selectors.forEach(selector => {
+        selector.addEventListener('click', () => {
+          selectors.forEach(item => {
+            item.classList.remove('active');
+            const img = item.querySelector('img');
+            img.src = img.getAttribute('data-default');
+          });
+
+          selector.classList.add('active');
+          const img = selector.querySelector('img');
+          img.src = img.getAttribute('data-active');
+
+          const selectedPage = selector.querySelector('span').innerText.trim();
+          for (const page in displays) {
+            displays[page].style.display = (page === selectedPage) ? 'block' : 'none';
+          }
         });
-
-        selector.classList.add('active');
-        const img = selector.querySelector('img');
-        img.src = img.getAttribute('data-active');
-
-        const selectedPage = selector.querySelector('span').innerText.trim();
-        for (const page in displays) {
-          displays[page].style.display = (page === selectedPage) ? 'block' : 'none';
-        }
       });
-    });
 
-    // Show dashboard by default
-    displays['Dashboard'].style.display = 'block';
+      // Show dashboard by default
+      displays['Dashboard'].style.display = 'block';
 
-    // Chart.js config
-    const ctx = document.getElementById('spendingChart').getContext('2d');
-new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['SEP', 'OCT', 'NOV', 'DEC', 'JAN', 'FEB'],
-    datasets: [
-      {
-        label: 'Revenue',
-        data: [70, 60, 108, 72, 110, 115],
-        borderColor: '#8A5AFB',
-        backgroundColor: 'transparent',
-        tension: 0.4,
-        pointBackgroundColor: '#fff',
-        pointBorderWidth: 2,
-        pointRadius: 5
-      },
-      {
-        label: 'Spending',
-        data: [50, 30, 70, 50, 60, 80],
-        borderColor: '#00C8FF',
-        backgroundColor: 'transparent',
-        tension: 0.4,
-        pointRadius: 0
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: {
-          label: context => `$${context.parsed.y}`
+      // Chart.js config
+      const ctx = document.getElementById('spendingChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['SEP', 'OCT', 'NOV', 'DEC', 'JAN', 'FEB'],
+      datasets: [
+        {
+          label: 'Revenue',
+          data: [70, 60, 108, 72, 110, 115],
+          borderColor: '#8A5AFB',
+          backgroundColor: 'transparent',
+          tension: 0.4,
+          pointBackgroundColor: '#fff',
+          pointBorderWidth: 2,
+          pointRadius: 5
+        },
+        {
+          label: 'Spending',
+          data: [50, 30, 70, 50, 60, 80],
+          borderColor: '#00C8FF',
+          backgroundColor: 'transparent',
+          tension: 0.4,
+          pointRadius: 0
         }
-      }
+      ]
     },
-    scales: {
-      x: {
-        grid: { display: false },
-        ticks: { color: '#ccc' }
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: context => `$${context.parsed.y}`
+          }
+        }
       },
-      y: {
-        display: false
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { color: '#ccc' }
+        },
+        y: {
+          display: false
+        }
       }
     }
-  }
-});
-
-const pieCtx = document.getElementById('myPieChart').getContext('2d');
-    new Chart(pieCtx, {
-      type: 'pie',
-      data: {
-        labels: ['Your Files', 'System', 'Other'],
-        datasets: [{
-          data: [63, 25, 12],
-          backgroundColor: ['#8b5cf6', '#38bdf8', '#93c5fd'],
-          borderWidth: 0
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: false }
-        }
-      }
   });
-  const trafficCtx = document.getElementById('trafficChart').getContext('2d');
 
-new Chart(trafficCtx, {
-  type: 'bar',
-  data: {
-    labels: ['00', '04', '08', '12', '14', '16', '18'],
-    datasets: [{
-      data: [3, 4, 7, 5, 6, 7, 2],
-      backgroundColor: '#8A5AFB',
-      borderRadius: 8,
-      barThickness: 20
-    }]
-  },
-  options: {
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: {
-          label: context => `${context.parsed.y} Visitors`
+  const pieCtx = document.getElementById('myPieChart').getContext('2d');
+      new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+          labels: ['Your Files', 'System', 'Other'],
+          datasets: [{
+            data: [63, 25, 12],
+            backgroundColor: ['#8b5cf6', '#38bdf8', '#93c5fd'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false }
+          }
+        }
+    });
+    const trafficCtx = document.getElementById('trafficChart').getContext('2d');
+
+  new Chart(trafficCtx, {
+    type: 'bar',
+    data: {
+      labels: ['00', '04', '08', '12', '14', '16', '18'],
+      datasets: [{
+        data: [3, 4, 7, 5, 6, 7, 2],
+        backgroundColor: '#8A5AFB',
+        borderRadius: 8,
+        barThickness: 20
+      }]
+    },
+    options: {
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: context => `${context.parsed.y} Visitors`
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { color: '#aaa' }
+        },
+        y: {
+          display: false
         }
       }
-    },
-    scales: {
-      x: {
-        grid: { display: false },
-        ticks: { color: '#aaa' }
-      },
-      y: {
-        display: false
-      }
     }
-  }
-});
-</script>
-</body>
-</html>
+  });
+  </script>
+  </body>
+  </html>

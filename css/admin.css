@@ -12,7 +12,7 @@ body{
     display: none;
 }
 .admin-sidebar{
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 250px;
     background-color: black;
@@ -189,9 +189,13 @@ body{
     color: green;
 }
 .admin-home-body{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap:10px
+    display: flex;
+    flex-direction: column;
+}
+.home-section{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 .home-line-chart {
     background: rgb(10, 26, 65);
@@ -274,38 +278,45 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
+}
   
-  .traffic-header {
+.traffic-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
   
-  .traffic-label {
+.traffic-label {
     font-size: 14px;
     color: #ccc;
     margin: 0;
-  }
+}
   
-  .traffic-value {
+.traffic-value {
     font-size: 24px;
     margin: 0;
-  }
+}
   
-  .unit {
+.unit {
     font-size: 14px;
     color: #ccc;
-  }
+}
   
-  .traffic-growth {
+.traffic-growth {
     color: #2ECC71;
     font-size: 14px;
     font-weight: bold;
-  }
-  
-  canvas {
+}
+.product-tracking-card{
+    width:600px;
+}
+.order-table{
+    width: 99%;
+    margin-bottom: 20px;
+}
+canvas {
     width: 100% !important;
     height: 100% !important;
-  }
+}
+
   
