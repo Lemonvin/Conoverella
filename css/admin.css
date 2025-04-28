@@ -314,9 +314,85 @@ body{
     width: 99%;
     margin-bottom: 20px;
 }
-canvas {
-    width: 100% !important;
-    height: 100% !important;
+.product-tracking-card table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+.product-tracking-card th,.product-tracking-card td {
+    text-align: left;
+    padding: 12px;
+  }
+.product-tracking-card th {
+    color: #a0aec0;
+    font-size: 14px;
+  }
+.product-tracking-card tr {
+    border-bottom: 1px solid #2d2d4a;
+  }
+.product-tracking-card input[type="checkbox"] {
+    accent-color: #7f56d9;
+    transform: scale(1.2);
 }
+.checked-row input[type="checkbox"]:checked {
+    background-color: #7f56d9;
+}
+/** Order table **/
+.order-table-card {
+    width: 100%;
+}
+.order-table-card table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+.order-table-card th, .order-table-card td {
+    padding: 20px;
+    text-align: left;
+  }
+.order-table-card th {
+    color: #a0aec0;
+    font-size: 16px;
+  }
+.order-table-card tr {
+    border-bottom: 1px solid #2d2d4a;
+  }
+.order-table-card .status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+.order-table-card .status span {
+    font-size: 16px;
+  }
+.order-table-card .status-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+.order-table-card .approved {
+    background-color: #22c55e;
+  }
+.order-table-card .disable {
+    background-color: #ef4444;
+  }
+.order-table-card .error {
+    background-color: #facc15;
+  }
+.order-table-card .progress-bar {
+    background-color: #2d2d4a;
+    border-radius: 10px;
+    height: 10px;
+    width: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+.order-table-card .progress-fill {
+    background-color: #7f56d9;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 
   
