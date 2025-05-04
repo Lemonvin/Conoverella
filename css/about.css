@@ -107,6 +107,7 @@ html, body {
 
 /* JOIN WRAPPER */
 .join-wrapper {
+    margin-top: -30px;
     display: flex;
     flex-direction: column;
     align-items: center;
