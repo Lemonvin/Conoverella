@@ -16,15 +16,19 @@
       </div>
       <div class="sidebar-selector-wrapper">
         <a class="sidebar-selector active">
-          <img src="../pic/admin-pic/home-active.png" data-default="/pic/admin-pic/home (1).png" data-active="/pic/admin-pic/home-active.png" />
+          <img src="../pic/admin-pic/home-active.png" data-default="../pic/admin-pic/home (1).png" data-active="../pic/admin-pic/home-active.png" />
           <span>Dashboard</span>
         </a>
         <a class="sidebar-selector">
-          <img src="../pic/header-pics/shopping-cart.png" data-default="/pic/header-pics/shopping-cart.png" data-active="/pic/sidebar-pics/grocery-store.png" />
+          <img src="../pic/admin-pic/shirt.png" data-default="../pic/admin-pic/shirt.png" data-active="../pic\admin-pic/shirt-active.png" />
           <span>Products</span>
         </a>
         <a class="sidebar-selector">
-          <img src="../pic/admin-pic/customer.png" data-default="/pic/admin-pic/customer.png" data-active="/pic/admin-pic/customer-active.png" />
+          <img src="../pic/header-pics/shopping-cart.png" data-default="../pic/header-pics/shopping-cart.png" data-active="../pic/sidebar-pics/grocery-store.png" />
+          <span>Order</span>
+        </a>
+        <a class="sidebar-selector">
+          <img src="../pic/admin-pic/customer.png" data-default="../pic/admin-pic/customer.png" data-active="../pic/admin-pic/customer-active.png" />
           <span>Customer</span>
         </a>
       </div>
@@ -287,7 +291,189 @@
             <img class="admin-profile-pic" src="../pic/slide-pics/ring.jpg" />
           </div>
         </div>
-        <!-- Add product UI here -->
+        <div id="addProductModal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Product</h2>
+            <form id="addProductForm">
+              <label>Type:</label>
+              <input type="text" id="productType" required /></br>
+
+              <label>Name:</label>
+              <input type="text" id="productName" required /></br>
+              
+              <label>Price:</label>
+              <input type="number" id="productPrice" required /></br>
+
+              <label>Stock:</label>
+              <input type="number" id="productStock" required /></br>
+
+              <label>Product Image:</label>
+              <input type="file" id="productImage" accept="image/*" required />
+
+              <button class="add-btn" type="submit">Add Product</button>
+            </form>
+          </div>
+        </div>
+        <div class="product-btn-wrapper">
+          <button id="add-product-btn"><img src="../pic/admin-pic/plus-symbol-button.png"> Add New Product</button>
+          <button id="mass-delete-btn"><img src="../pic/cart-pics/trash.png">Mass Delete</button>
+        </div>
+        <div class="product-search-wrapper">
+          <input class="product-searchbar" type="text" placeholder="Search Product">
+          <div class="dropdown-wrapper">
+            <button class="dropdown">All Categories <span>&#8964;</span></button>
+            <div class="dropdown-category-content">
+                  <ul class="category-dropdown">
+                    <li>All Categories</li>
+                    <li>Men</li>
+                    <li>Women</li>
+                    <li>Accesories</li>
+                  </ul> 
+            </div>
+          </div>
+          <div class="dropdown-wrapper">
+            <button class="dropdown">All Status <span>&#8964;</span></button>
+            <div class="dropdown-status-content">
+              <ul class="stock-status-dropdown">
+                  <li>All</li>
+                  <li>In Stock</li>
+                  <li>Out of Stock</li>
+                  <li>Low Stock</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="product-card-container">
+          <div class="card">
+            <div class="card-pic">
+              <img src="../pic\admin-pic\bell.png" alt="Denim Jeans">
+            </div>
+            <div class="product-description">
+              <p class="product-type">Women</p>
+              <h2 class="name">Bell</h2>
+              <h3 class="price">$19.99</h3>
+              <div class="stock">
+                <img src="../pic/admin-pic/box.png">
+                <p>In Stock <span>(12)</span></p>
+              </div>
+            </div>
+            <div class="card-btn-wrapper">
+              <button><img src="../pic/sidebar-pics/edit.png">Edit</button>
+              <button><img src="../pic/cart-pics/trash.png">Delete</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic">
+              <img src="../pic\admin-pic\bell.png" alt="Denim Jeans">
+            </div>
+            <div class="product-description">
+              <p class="product-type">Women</p>
+              <h2 class="name">Bell</h2>
+              <h3 class="price">$19.99</h3>
+              <div class="stock">
+                <img src="../pic/admin-pic/box.png">
+                <p>In Stock <span>(12)</span></p>
+              </div>
+            </div>
+            <div class="card-btn-wrapper">
+              <button><img src="../pic/sidebar-pics/edit.png">Edit</button>
+              <button><img src="../pic/cart-pics/trash.png">Delete</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic">
+              <img src="../pic\admin-pic\bell.png" alt="Denim Jeans">
+            </div>
+            <div class="product-description">
+              <p class="product-type">Women</p>
+              <h2 class="name">Bell</h2>
+              <h3 class="price">$19.99</h3>
+              <div class="stock">
+                <img src="../pic/admin-pic/box.png">
+                <p>In Stock <span>(12)</span></p>
+              </div>
+            </div>
+            <div class="card-btn-wrapper">
+              <button><img src="../pic/sidebar-pics/edit.png">Edit</button>
+              <button><img src="../pic/cart-pics/trash.png">Delete</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-pic">
+              <img src="../pic\admin-pic\bell.png" alt="Denim Jeans">
+            </div>
+            <div class="product-description">
+              <p class="product-type">Women</p>
+              <h2 class="name">Bell</h2>
+              <h3 class="price">$19.99</h3>
+              <div class="stock">
+                <img src="../pic/admin-pic/box.png">
+                <p>In Stock <span>(12)</span></p>
+              </div>
+            </div>
+            <div class="card-btn-wrapper">
+              <button><img src="../pic/sidebar-pics/edit.png">Edit</button>
+              <button><img src="../pic/cart-pics/trash.png">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Orders -->
+    <section class="admin-order-display">
+      <div class="admin-products">
+        <div class="admin-home-header">
+          <div class="header-title-wrapper">
+            <p>Admin / Order</p>
+            <h1>Order Overview</h1>
+          </div>
+          <div class="header-searchbar-wrapper">
+            <div class="header-searchbar">
+              <img src="../pic/admin-pic/search.png" class="search-icon" />
+              <input type="search" placeholder="Search" />
+            </div>
+            <div class="notification-container">
+              <button class="notification-btn">
+                <img src="../pic/admin-pic/bell.png" />
+                <span class="notification-count">3</span>
+              </button>
+            </div>
+            <a class="info-btn"><img src="../pic/admin-pic/info.png" /></a>
+            <img class="admin-profile-pic" src="../pic/slide-pics/ring.jpg" />
+          </div>
+        </div>
+        <table class="customer-table">
+        <thead>
+          <tr>
+            <th>Customer ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th>Payment</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CUSTOMER0001</td>
+            <td>Bart, Joshep</td>
+            <td>bartkopessh123@gmail.com</td>
+            <td>May 2, 2359</td>
+            <td>Pending</td>
+            <td>$1200</td>
+            <td>Unpaid</td>
+            <td class="actions">
+              <button class="view-btn"><img src="../pic/sidebar-pics/hide.png"></button>
+              <button class="edit-btn"><img src="../pic/sidebar-pics/edit.png"></button>
+              <button class="delete-btn"><img src="../pic/cart-pics/trash.png"></button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
       </div>
     </section>
 
@@ -314,7 +500,38 @@
             <img class="admin-profile-pic" src="../pic/slide-pics/ring.jpg" />
           </div>
         </div>
-        <!-- Add customer UI here -->
+
+      <table class="customer-table">
+        <thead>
+          <tr>
+            <th>Customer ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Orders</th>
+            <th>Total Spent</th>
+            <th>Last Order</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CUSTOMER0001</td>
+            <td>Bart, Joshep</td>
+            <td>bartkopessh123@gmail.com</td>
+            <td>+639312431231</td>
+            <td>9</td>
+            <td>$900</td>
+            <td>March 20, 1984</td>
+            <td class="actions">
+              <button class="view-btn"><img src="../pic/sidebar-pics/hide.png"></button>
+              <button class="edit-btn"><img src="../pic/sidebar-pics/edit.png"></button>
+              <button class="delete-btn"><img src="../pic/cart-pics/trash.png"></button>
+            </td>
+          </tr>
+        </tbody>
+  </table>
+
       </div>
     </section>
 
@@ -325,6 +542,7 @@
       const displays = {
         'Dashboard': document.querySelector('.admin-home-display'),
         'Products': document.querySelector('.admin-product-display'),
+        'Order': document.querySelector('.admin-order-display'),
         'Customer': document.querySelector('.admin-customer-display')
       };
 
@@ -452,5 +670,146 @@
     }
   });
   </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropdownWrappers = document.querySelectorAll('.dropdown-wrapper');
+
+    dropdownWrappers.forEach(wrapper => {
+      const button = wrapper.querySelector('.dropdown');
+      const dropdownContent = wrapper.querySelector('div');
+
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        // Close all other dropdowns
+        document.querySelectorAll('.dropdown-wrapper div').forEach(content => {
+          if (content !== dropdownContent) {
+            content.style.display = 'none';
+          }
+        });
+
+        // Toggle current dropdown
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.dropdown-wrapper div').forEach(content => {
+        content.style.display = 'none';
+      });
+    });
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('addProductModal');
+  const openBtn = document.getElementById('add-product-btn');
+  const closeBtn = document.querySelector('.close-btn');
+  const form = document.getElementById('addProductForm');
+  const cardContainer = document.querySelector('.product-card-container');
+
+  // Open modal
+  openBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
+
+  // Close modal
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Close modal on outside click
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+
+  // Form submission
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const type = document.getElementById('productType').value;
+    const name = document.getElementById('productName').value;
+    const price = document.getElementById('productPrice').value;
+    const stock = document.getElementById('productStock').value;
+    const imageFile = document.getElementById('productImage').files[0];
+
+    if (!imageFile) return;
+
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      const cardHTML = `
+        <div class="card">
+          <div class="card-pic">
+            <img src="${event.target.result}" alt="${name}">
+          </div>
+          <div class="product-description">
+            <p class="product-type">${type}</p>
+            <h2 class="name">${name}</h2>
+            <h3 class="price">$${parseFloat(price).toFixed(2)}</h3>
+            <div class="stock">
+              <img src="../pic/admin-pic/box.png">
+              <p>In Stock <span>(${parseInt(stock)})</span></p>
+            </div>
+          </div>
+          <div class="card-btn-wrapper">
+            <button><img src="../pic/sidebar-pics/edit.png">Edit</button>
+            <button><img src="../pic/cart-pics/trash.png">Delete</button>
+          </div>
+        </div>
+      `;
+      cardContainer.insertAdjacentHTML('beforeend', cardHTML);
+      modal.style.display = 'none';
+      form.reset();
+    };
+
+    reader.readAsDataURL(imageFile);
+  });
+});
+
+function attachDeleteEvent() {
+  const deleteButtons = document.querySelectorAll('.card-btn-wrapper button:last-child');
+
+  deleteButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.card');
+      card.remove();
+    });
+  });
+}
+
+// Initial attachment for existing cards
+attachDeleteEvent();
+
+// Also re-attach after adding a new card
+form.addEventListener('submit', (e) => {
+  // ... your card creation code ...
+  reader.onload = function (event) {
+    const cardHTML = `
+      <div class="card">
+        <div class="card-pic">
+          <img src="${event.target.result}" alt="${name}">
+        </div>
+        <div class="product-description">
+          <p class="product-type">${type}</p>
+          <h2 class="name">${name}</h2>
+          <h3 class="price">$${parseFloat(price).toFixed(2)}</h3>
+          <div class="stock">
+            <img src="../pic/admin-pic/box.png">
+            <p>In Stock <span>(${parseInt(stock)})</span></p>
+          </div>
+        </div>
+        <div class="card-btn-wrapper">
+          <button><img src="../pic/sidebar-pics/edit.png">Edit</button>
+          <button><img src="../pic/cart-pics/trash.png">Delete</button>
+        </div>
+      </div>
+    `;
+    cardContainer.insertAdjacentHTML('beforeend', cardHTML);
+    attachDeleteEvent(); // 🔁 Attach delete to new button
+    modal.style.display = 'none';
+    form.reset();
+  };
+});
+</script>
   </body>
   </html>

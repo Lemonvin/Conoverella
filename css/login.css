@@ -1,13 +1,257 @@
-.login-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.login-wrapper{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    height: 450px;
-    background-color: black;
-    color: white;
+    body,html{
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+    .login-container,.sign-in-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    .sign-in-container{
+        display: grid;
+    }
+    .login-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        color: white;
+        justify-self: center;
+        align-self: center;
+    }
+    .login-wrapper h1{
+        margin-bottom: 8px;
+        font-weight: bold;
+        font-family: "patrick hand";
+    }
+    .login-wrapper p{
+        color: gray;
+        margin-top: 0;
+    }
+    .login-wrapper label{
+        margin: 10px 0;
+    }
+    .login-wrapper input{
+        background-color: black;
+        border: 1px solid gray;
+        padding: 15px 15px;
+        color: white;
+        border-radius: 10px;
+    }
+    .checkbox{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .checkbox-wrapper{
+        display: flex;
+        align-items: center;
+    }
+    .checkbox-wrapper label,.checkbox a{
+        font-size: 13px;
+    }
+    .checkbox a{
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+    }
+    .checkbox-wrapper input{
+        accent-color: beige;
+    }
+    .login-btn-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .login-btn{
+        align-self: center;
+    }
+    .login-btn-wrapper p{
+        margin: 15px;
+    }
+    .login-btn,.google-login-btn button,.google-sign-btn button{
+        width: 400px;
+        height: 40px;
+        background-color: beige;
+        border: 1px solid beige;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+    .google-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .google-login-btn img{
+        height: 30px;
+        position: absolute;
+        left: 250px;
+        bottom: 120px;
+    }
+    .sign-logo{
+        right:250px;
+    }
+    .login-wrapper a{
+        color: white;
+        text-decoration: none;
+    }
+    .login-copyright{
+        position: absolute;
+        bottom: 0;
+    }
 
-}
+    .login-hero,.sign-in-hero {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    }
+
+    .login-title,.sign-in-title {
+    background-image: url('../pic/photo-1441986300917-64674bd600d8.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(60%);
+    height: 100%;
+    width: 100%;
+    }
+
+    .learn-more {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    }
+
+    .title-container h2 {
+    font-size: 70px;
+    border-bottom: 2px solid white;
+    color: white;
+    margin: 0;
+    font-family: "Tilt Prism", sans-serif;
+    letter-spacing: 10px;
+    }
+
+    .title-container .title-p {
+    color: white;
+    font-family: "Tilt Prism", sans-serif;
+    font-size: 27px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    }
+    .learn-more-link{
+        position: relative;
+        left: 65px;
+        border: 1px solid white;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        justify-content: center;
+        padding: 10px 20px;
+    }
+
+    .learn-more p {
+    font-size: 20px;
+    margin: 0;
+
+    }
+
+    .learn-more h1 {
+    margin: 0;
+    }
+
+    .sign-in-dl{
+        font-size: 25px;
+        padding: 12px 30px;
+        background-color: beige;
+        border: 1px solid beige;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+    .sign-in-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+    }
+    .sign-in-wrapper h1{
+        color: white;
+        font-size: 60px;
+        margin: 0;
+        letter-spacing: 25px;
+        font-family: "patrick hand",sans-serif;
+    }
+    .sign-in-wrapper .p{
+        color: white;
+        font-size: 20px;
+        width: 450px;
+        margin: 5px;
+        font-family: "crimson text";
+    }
+    .sign-in-input{
+        display: flex;
+        flex-direction: column;
+    }
+    .sign-in-input h1{
+        color: white;
+        font-size: 30px;
+        margin-bottom: 20px;
+        letter-spacing: normal;
+    }
+    .sign-in-input input{
+        background-color: black;
+        border: 1px solid gray;
+        padding: 10px 20px;
+        border-radius: 10px;
+        color: white;
+    }
+    .sign-in-name{
+        display: flex;
+        gap: 16px;
+    }
+    .sign-in-name .name{
+        width: 170px;
+    }
+    .sign-in-input input{
+        width: 400px;
+    }
+    .google-sign-btn img{
+        height:30px;
+        position: absolute;
+        right: 400px; 
+        bottom: 53px;
+    }
+    .sign-copyright{
+        color: white;
+        position: absolute;
+        bottom: 0px;
+    }
+    .hidden {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    }
+    .auth-toggle-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    }
+    #toggle-auth {
+    padding: 10px 20px;
+    background-color: beige;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    }

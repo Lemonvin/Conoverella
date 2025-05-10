@@ -5,37 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conoverella</title>
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jersey+15&family=Patrick+Hand&family=The+Nautigal:wght@400;700&family=Tienne:wght@400;700;900&family=Tilt+Prism&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="login-container">
+    <div class="auth-toggle-wrapper">
+        <button id="toggle-auth">Switch to Sign Up</button>
+    </div>
+    <div class="login-container fade show">
         <div class="login-wrapper">
-            <h3>Sign in</h3>
+            <h1>Sign in</h1>
             <p>Enter your email and password to sign in!</p>
             
-            <label for="email">Email:</label>
+            <label for="email">Email</label>
             <input name="email" type="text" placeholder="Enter your email">
             <label for="pass">Password</label>
-            <input name="pass" type="password" placeholder="Enter your email">
-            <div>
-                <input type="checkbox" name="remember-me">
-                <label for="remember-me">Keep me logged in</label>
-                <a>Forget password?</a>
+            <input name="pass" type="password" placeholder="Enter your password">
+            <div class="checkbox">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" name="remember-me">
+                    <label for="remember-me">Keep me logged in</label>
+                </div>
+                <a href="#">Forget password?</a>
             </div>
-            <button>Sign in</button>
-            <div>
-                <img class="" src="" alt="google-logo">
-                <button>Sign in with google</button>
+            <div class="login-btn-wrapper">
+                <button class="login-btn">Sign in</button>
+                <p>━━━━━━━━━━━━or━━━━━━━━━━━━</p>
+                <div class="google-login-btn">
+                    <button><img src="../pic/7123025_logo_google_g_icon.png" alt="google-logo">Sign in with google</button>
+                </div>
             </div>
+            </br>
             <p>Not registered yet?<a href="#">Create an Account</a></p>
+            <p class="login-copyright">© 2025, Conoverella – All Rights Reserved | Powered by Figma.</p>
         </div>
-        <div class="learn-more">
-            <h2>Conoverella</h2>
-            <p>Become the better version of yourself</p>
-        </div>
+        <!-- Start hero section -->
+            <div class="login-hero">
+                <div class="login-title"></div>
 
-        <div>
-
-        </div>
+                <div class="learn-more">
+                    <div class="title-container">
+                    <h2>Conoverella</h2>
+                    <p class="title-p">Become the better version of yourself</p>
+                    <div class="learn-more-link">
+                        <p>Learn more about Conoverella</p>
+                        <h1>conoverellaph.com</h1>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        <!-- End hero section -->
     </div>
+        <div class="sign-in-container hidden fade">
+            <div class="sign-in-hero">
+                <div class="sign-in-title">
+                </div>
+                <div class="learn-more">
+                    <div class="title-container">
+                        <h2>Conoverella</h2>
+                        <p class="title-p">Become the better version of yourself</p>
+                        <button class="sign-in-dl">Download our App!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sign-in-wrapper">
+                <h1>Welcome!</h1>
+                <p class="p">Sign up now to unlock exclusive deals and enjoy a seamless shoppong experience.</p>
+                <div class="sign-in-input">
+                    <h1>Register</h1>
+                    <div class="sign-in-name">
+                        <input class="name" type="text" placeholder="First Name">
+                        <input class="name" type="text" placeholder="Last Name">
+                    </div>
+                    </br>
+                    <input type="text" placeholder="Enter Email">
+                    </br>
+                    <input type="pass" placeholder="Enter Password">
+                    </br>
+                    <input type="pass" placeholder="Re-enter Password">
+                </div>
+                <div class="login-btn-wrapper">
+                    <button class="login-btn">Sign Up</button>
+                    <p class="p">━━━━━━━━━ or ━━━━━━━━━</p>
+                    <div class="google-sign-btn">
+                        <button><img  src="../pic/7123025_logo_google_g_icon.png" alt="google-logo">Sign in with google</button>
+                    </div>
+                </div>
+                <p class="sign-copyright">© 2025, Conoverella – All Rights Reserved | Powered by Figma.</p>
+            </div>
+        </div>
 </body>
+<script>
+  const toggleBtn = document.getElementById('toggle-auth');
+  const loginContainer = document.querySelector('.login-container');
+  const signInContainer = document.querySelector('.sign-in-container');
+
+  toggleBtn.addEventListener('click', () => {
+    loginContainer.classList.toggle('hidden');
+    signInContainer.classList.toggle('hidden');
+    toggleBtn.textContent = loginContainer.classList.contains('hidden')
+      ? 'Switch to Login'
+      : 'Switch to Sign Up';
+  });
+  
+</script>
 </html>
