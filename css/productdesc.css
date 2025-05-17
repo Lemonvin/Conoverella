@@ -1,0 +1,228 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    nav {
+      background: #e4cba2;
+      padding: 14px 0;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    .product-section {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .left-panel {
+      flex: 1;
+      display: flex;
+      gap: 15px;
+    }
+
+    .thumbs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .thumbs div {
+      width: 60px;
+      height: 60px;
+      background: #e0e0e0;
+      border: 1px solid #ccc;
+    }
+
+    .main-image {
+      flex: 1;
+      height: 480px;
+      background: #eee;
+      border: 1px solid #ccc;
+    }
+
+    .promo-banner {
+      margin-top: 15px;
+      height: 100px;
+      background: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .right-panel {
+      flex: 1;
+      background: #1a1a1a;
+      color: white;
+      padding: 25px;
+    }
+
+    .right-panel h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .right-panel .subtitle {
+      font-size: 14px;
+      color: #bbb;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #ff5e5e;
+      font-size: 16px;
+    }
+
+    .free-shipping {
+      background-color: #3fa46a;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+    .stars {
+      margin: 10px 0;
+      color: gold;
+    }
+
+    .colors, .sizes {
+      display: flex;
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    .color-option {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      cursor: pointer;
+    }
+
+    .color1 { background-color: brown; }
+    .color2 { background-color: silver; }
+    .color3 { background-color: black; }
+
+    .size-btn {
+      padding: 10px;
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .quantity button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .cta {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cta button {
+      background-color: #fff;
+      color: black;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .cta button .strike {
+      text-decoration: line-through;
+      color: red;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+
+    .cta button .now {
+      font-weight: bold;
+    }
+
+    .size-chart-section {
+      background: #f7f7f7;
+      padding: 30px 20px;
+    }
+
+    .size-chart {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .chart-diagram, .chart-table {
+      flex: 0 0 48%;
+      height: 260px;
+      background: #dedede;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .rating-section {
+      background: #f1f1f1;
+      padding: 30px 20px;
+    }
+
+    .rating-breakdown {
+      background: #dcdcdc;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #555;
+    }
