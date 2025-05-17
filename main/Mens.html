@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conoverella</title>
-    <link rel="stylesheet" href="../css/Home.css">
+    <title>CONOVERELLA - Become The Better Version Of Yourself</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mens-collection.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/sidebar.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&family=Tienne:wght@400;700;900&family=Tilt+Prism&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
-
+    
+    
 </head>
 <body>
     <nav>
@@ -202,8 +215,8 @@
         </div>
         <div class="nav-bar">
             <ul>
-                <li><a class="active" href="#home">HOME</a></li>
-                <li><a href="#home">MEN</a></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a class="active" href="#home">MEN</a></li>
                 <li><a href="#home">WOMEN</a></li>
                 <li><a href="#home">NEW ARRIVALS</a></li>
                 <li><a href="#home">NEW COLLECTIONS</a></li>
@@ -213,91 +226,55 @@
             </ul>
         </div>
     </nav>
-    <main>
-        <div class="container">
-            <div class="section-background">
-                <h1 class="section-1-welcome">Welcome to</h1>
-                <h1 class="section-1-title">CONOVERELLA</h1>
-                <div class="section-1-description">
-                    <p class="description-part-1">Discover a world of luxury fashion at your fingertips. At Conoverella, we bring you premium, stylish, and effortlessly chic clothing designed for those who want to dress fast and shine instantly. Whether you're looking for timeless elegance or modern sophistication, we have the perfect pieces to elevate your wardrobe.
-                    </p>
-                    <p class="description-part-2">Shop now and become the best version of yourself!</p>
-                </div>
-                <button class="shop-now">SHOP NOW!</button>
-            </div>
-            <div class="shipping-policies"> 
-                <div class="shipping-policy">
-                    <img src="../pic/header-pics/delivery.png">
-                    <div class="policy-text">
-                        <h2 class="policy-title">FREE SHIPPING</h2>
-                        <p class="policy-description">FREE SHIPPING TO ALL PH ORDER OR ORDER ABOVE $150</p>
+    
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url(menscollections-pics/menbg.png)">
+                <div class="carousel-overlay" >
+                    <div class="hero-content">
+                        <h2 class="welcome-text">Welcome to</h2>
+                        <h1 class="hero-logo">Men's World</h1>
+                        <p class="hero-description">
+                           Gentlemen, welcome to a realm where refinement meets strength, and style is a statement of character. Men’s World is not merely a space—it is an embodiment of elegance, confidence, and the pursuit of excellence. Here, we celebrate the art of sophistication, the power of resilience, and the timeless charm of the modern gentleman.
+                        </p>
+                        <p class="hero-description3">Step forward with grace, dress with purpose, and carry yourself with distinction.</p>
+                        <p class="hero-description2">Welcome to Men’s World—where every man is a gentleman.</p>
                     </div>
                 </div>
-                <div class="shipping-policy">
-                    <img src="../pic/home-pics/return.png">
-                    <div class="policy-text">
-                        <h2 class="policy-title">30 DAYS RETURN</h2>
-                        <p class="policy-description">SIMPLY RETURN IT WITHIN 30 DAYS FOR AN EXCHANGE</p>
-                    </div>
-                </div>
-                <div class="shipping-policy" id="policy-payment-secure">
-                    <img src="../pic/home-pics/padlock.png">
-                    <div class="policy-text">
-                        <h2 class="policy-title">100% PAYMENT SECURITY</h2>
-                        <p class="policy-description">We guarantee safe transactions, secure checkout, and fraud protection, giving you peace of mind while you shop.</p>
+            </div>  
                     </div>
                 </div>
             </div>
-            <div class="slideshow-container">
-                <div class="slides-wrapper">
-        
-                    <!-- Slide 1 -->
-                    <div class="slide">
-                        <div class="left-column">
-                            <img src="../pic/slide-pics/women shoe 1.png" alt="Left Top 1">
-                            <img src="../pic/slide-pics/sunglasses women.jpg" alt="Left Bottom 1">
-                        </div>
-                        <div class="right-column">
-                            <img src="../pic/slide-pics/menswear 1.png" alt="Right 1">
-                        </div>
-                    </div>
-        
-                    <!-- Slide 2 -->
-                    <div class="slide">
-                        <div class="left-column">
-                            <img src="../pic/slide-pics/men watch 1.png" alt="Left Top 2">
-                            <img src="../pic/slide-pics/men shoe.jpg" alt="Left Bottom 2">
-                        </div>
-                        <div class="right-column">
-                            <img src="../pic/slide-pics/men suit.jpg" alt="Right 2">
-                        </div>
-                    </div>
-        
-                    <!-- Slide 3 -->
-                    <div class="slide">
-                        <div class="left-column">
-                            <img src="../pic/slide-pics/perfume.jpg" alt="Left Top 3">
-                            <img src="../image3b.jpg" alt="Left Bottom 3">
-                        </div>
-                        <div class="right-column">
-                            <img src="../pic/slide-pics/ring.jpg" alt="Right 3">
-                        </div>
-                    </div>
-        
+    <div class="product-showcase border-bottom">
+            <p class="mens-collection">Men's Collection</p>
+            <div class="items-row">
+                <div class="item-content">
+                    <img class="item-picture" src="../pic/menscollections-pics/mens-blazer.png">
+                    <p class="item-name">Men's Blazers →</p>
                 </div>
-        
-                <!-- Navigation Arrows -->
-                <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
-                <div class="next" onclick="moveSlide(1)">&#10095;</div>
-        
-                <!-- Dots -->
-                <div class="dots-container">
-                    <span class="dot" onclick="currentSlide(0)"></span>
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
+                <div class="item-content">
+                    <img class="item-picture" src="../pic/menscollections-pics/mens-pants.png">
+                    <p class="item-name">Men's Pants →</p>
+                </div>
+                <div class="item-content">
+                    <img class="item-picture" src="../pic/menscollections-pics/mens-polo.png">
+                    <p class="item-name"> Men's Polos →</p>
+                </div>
+                <div class="item-content">
+                    <img class="item-picture" src="../pic/menscollections-pics/mens-shoes.png">
+                    <p class="item-name"> Men's Shoes →</p>
+                </div>
+                <div class="item-content">
+                    <img class="item-picture" src="../pic/menscollections-pics/mens-shorts.png">
+                    <p class="item-name">Men's Shorts →</p>
+                </div>
+                <div class="item-content">
+                    <img class="item-picture" src="../pic/menscollections-pics/mens-trousers.png">
+                    <p class="item-name">Men's Trousers →</p>
                 </div>
             </div>
-    </main>
+      </div>
     <footer>
         <div class="footer-container">
             <div class="social">
@@ -346,42 +323,7 @@
             </div>
             <p>© 2025, Conoverella – Elevating Fashion, Empowering Confidence | Powered by Figma.</p>
         </div>
-    </footer>    
+    </footer>  
+    <script src="../JS/header.js"></script> 
 </body>
-<script src="../JS/header.js"></script>
-<script>
-    let slideIndex = 0;
-
-    function showSlides(index) {
-    const slidesWrapper = document.querySelector('.slides-wrapper');
-    const dots = document.querySelectorAll('.dot');
-    const totalSlides = document.querySelectorAll('.slide').length;
-
-    if (index >= totalSlides) slideIndex = 0;
-    if (index < 0) slideIndex = totalSlides - 1;
-
-    slidesWrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
-
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[slideIndex].classList.add('active');
-}
-
-function moveSlide(step) {
-    slideIndex += step;
-    showSlides(slideIndex);
-}
-
-function currentSlide(index) {
-    slideIndex = index;
-    showSlides(slideIndex);
-}
-
-// Auto-slide every 5 seconds
-setInterval(() => moveSlide(1), 5000);
-
-// Initialize the slideshow
-showSlides(slideIndex);
-
-
-    </script>
 </html>
